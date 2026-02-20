@@ -1,0 +1,521 @@
+\chapter{Números Reais} 
+
+% ====================================================
+% SEÇÃO 1.1
+% ====================================================
+\section{Os números racionais} 
+
+\begin{resumocapitulo}
+Revisão básica dos números racionais, frações e operações.
+\end{resumocapitulo}
+
+% ====================================================
+% SEÇÃO 1.2
+% ====================================================
+\section{Os números reais} 
+
+\begin{resumocapitulo}
+Inequações do primeiro grau, estudo de sinais e produtos de fatores lineares.
+\end{resumocapitulo}
+
+% --- EXERCÍCIOS 1 E 2 ---
+
+\registrasolucao{1.2}{1a}{
+\begin{passo}{1: Isolar os termos com $x$ de um lado e os números do outro}
+A inequação é $3x + 3 < x + 6$. 
+A regra de ouro é manter as incógnitas (o que tem $x$) juntas. Vamos subtrair $x$ de ambos os lados da desigualdade:
+\[ 3x - x + 3 < 6 \]
+\[ 2x + 3 < 6 \]
+\end{passo}
+\begin{passo}{2: Isolar completamente o termo com $x$}
+Agora, o número $3$ está "atrapalhando". Vamos subtraí-lo de ambos os lados para deixar o $2x$ sozinho:
+\[ 2x < 6 - 3 \Rightarrow 2x < 3 \]
+\end{passo}
+\begin{passo}{3: Encontrar o valor final de $x$}
+Dividindo ambos os lados por $2$ (positivo, o sinal não muda):
+\[ x < \frac{3}{2} \]
+\end{passo}
+\[
+\boxed{S = \left\{ x \in \mathbb{R} \mid x < \frac{3}{2} \right\}}
+\]
+}
+
+\registrasolucao{1.2}{1d}{
+\begin{passo}{1: Agrupar os termos semelhantes}
+Temos a inequação $x + 3 \le 6x - 2$.
+Para organizar, vamos passar tudo que tem $x$ para o lado esquerdo:
+\[ x - 6x + 3 \le -2 \Rightarrow -5x + 3 \le -2 \]
+\end{passo}
+\begin{passo}{2: Isolar o termo com $x$}
+Subtraímos $3$ de ambos os lados para deixar o $-5x$ sozinho:
+\[ -5x \le -2 - 3 \Rightarrow -5x \le -5 \]
+\end{passo}
+\begin{passo}{3: Cuidado especial com o sinal negativo}
+\begin{atencao}
+    Ao multiplicar ou dividir uma inequação inteira por um número negativo, és \textbf{obrigado a inverter o sentido do sinal} (por exemplo, de $\le$ para $\ge$).
+\end{atencao}
+\[ -5x \le -5 \Rightarrow x \ge \frac{-5}{-5} \Rightarrow x \ge 1 \]
+\end{passo}
+\[
+\boxed{S = \{ x \in \mathbb{R} \mid x \ge 1 \}}
+\]
+}
+
+\registrasolucao{1.2}{2f}{
+\begin{passo}{1: Encontrar as raízes de cada fator}
+Para $f(x) = (2x+1)(x-2)$, descobrimos onde cada parêntese zera:
+Fator 1: $2x + 1 = 0 \Rightarrow x = -1/2$. Fator 2: $x - 2 = 0 \Rightarrow x = 2$.
+\end{passo}
+\begin{passo}{2: Regra dos sinais para o produto final}
+Ambas as retas são crescentes (vão de $-$ para $+$). Multiplicando os sinais:
+\begin{itemize}
+    \item $x < -1/2$: ($-$) $\times$ ($-$) = Positivo ($+$)
+    \item $-1/2 < x < 2$: ($+$) $\times$ ($-$) = Negativo ($-$)
+    \item $x > 2$: ($+$) $\times$ ($+$) = Positivo ($+$)
+\end{itemize}
+\end{passo}
+\[
+\boxed{\text{Positiva nas pontas, Negativa no meio, Nula nas raízes}}
+\]
+}
+
+\registrasolucao{1.2}{2m}{
+\begin{passo}{1: Identificar as raízes de cada parte}
+Para $(x+1)(3x-2)(x-1)$, achamos as raízes: $x = -1$, $x = 2/3$, e $x = 1$.
+\end{passo}
+\begin{passo}{2: Analisar a alternância de sinais}
+Como o $x$ é positivo em todos os parênteses, a função global começa negativa à esquerda e alterna o sinal a cada raiz: ($-$, $+$, $-$, $+$).
+\end{passo}
+\[
+\boxed{
+\text{Positiva: } x \in \left(-1, \frac{2}{3}\right) \cup (1, +\infty) 
+}
+\]
+}
+
+\registrasolucao{1.2}{2n}{
+\begin{passo}{1: Analisar a natureza do termo ao quadrado}
+Para $f(x) = x^2 + 3$, lembre-se que $x^2 \ge 0$ para qualquer $x$ real.
+\end{passo}
+\begin{passo}{2: Conclusão do sinal}
+Se $x^2 \ge 0$, então $x^2 + 3 \ge 3$. Logo, a expressão é sempre estritamente \textbf{positiva}.
+\end{passo}
+\[
+\boxed{ f(x) > 0 \quad \forall x \in \mathbb{R} }
+\]
+}
+
+\registrasolucao{1.2}{2q}{
+\begin{passo}{1: Compreender a inclinação da reta}
+Para $f(x) = ax + b$ com $a < 0$, temos uma reta \textbf{decrescente}. A raiz é $x = -b/a$.
+\end{passo}
+\begin{passo}{2: Determinar os sinais pelo gráfico}
+Sendo uma reta que desce, ela é positiva antes da raiz e negativa depois dela.
+\end{passo}
+\[
+\boxed{ f(x) > 0 \text{ para } x < -b/a \quad \text{e} \quad f(x) < 0 \text{ para } x > -b/a }
+\]
+}
+
+% --- EXERCÍCIOS 3 A 10 ---
+
+\registrasolucao{1.2}{3d}{
+\begin{passo}{1: Transformar a inequação quadrática em equação}
+Resolver $x^2 - 4 > 0$. Encontramos as raízes: $x^2 - 4 = 0 \Rightarrow x = \pm 2$.
+\end{passo}
+\begin{passo}{2: Analisar a concavidade e selecionar intervalo}
+Concavidade para cima ($a=1>0$). A parábola é positiva ($>0$) nas extremidades, ou seja, antes do $-2$ e depois do $2$.
+\end{passo}
+\[
+\boxed{S = \{ x \in \mathbb{R} \mid x < -2 \text{ ou } x > 2 \}}
+\]
+}
+
+\registrasolucao{1.2}{3e}{
+\begin{passo}{1: Fatorar a expressão}
+Para $x^2 - 5x + 6 \le 0$, as raízes por soma e produto são $2$ e $3$.
+\end{passo}
+\begin{passo}{2: Estudo gráfico rápido}
+Parábola sorridente. A parte negativa (abaixo de zero) fica entre as raízes. Incluímos os extremos devido ao "menor ou igual".
+\end{passo}
+\[
+\boxed{S = [2, 3]}
+\]
+}
+
+\registrasolucao{1.2}{3n}{
+\begin{passo}{1: Avaliar uma expressão sem raízes reais}
+Para $x^2 + x + 1 > 0$, calculamos $\Delta = 1 - 4 = -3$. A parábola não cruza o eixo $x$.
+\end{passo}
+\begin{passo}{2: Conclusão}
+Com concavidade para cima e sem raízes, a parábola está inteira na parte positiva. Logo, qualquer valor de $x$ serve.
+\end{passo}
+\[
+\boxed{S = \mathbb{R}}
+\]
+}
+
+\registrasolucao{1.2}{5b}{
+\begin{passo}{1: Inequação quociente (cuidado especial)}
+Temos $\frac{2x - 4}{x + 1} \ge 0$. \textbf{Não multiplique cruzado}.
+\end{passo}
+\begin{passo}{2: Raízes e Quadro de Sinais}
+Numerador zera em $x=2$. Denominador zera em $x=-1$. 
+O quadro de sinais mostra que a divisão é positiva antes do $-1$ e depois do $2$. O $-1$ fica aberto (denominador).
+\end{passo}
+\[
+\boxed{S = (-\infty, -1) \cup [2, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{5e}{
+\begin{passo}{1: Padronizar e tirar o MMC}
+Para $\frac{x}{x-2} < 3$, passamos o 3 para a esquerda: $\frac{x - 3(x-2)}{x-2} < 0 \Rightarrow \frac{-2x + 6}{x-2} < 0$.
+\end{passo}
+\begin{passo}{2: Quadro de sinais final}
+Raiz de cima é $3$ (reta desce). Raiz de baixo é $2$ (reta sobe). A fração é negativa nas extremidades.
+\end{passo}
+\[
+\boxed{S = (-\infty, 2) \cup (3, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{6b}{
+\begin{passo}{1: Conceito de Módulo "Menor que"}
+Para $|x - 3| \le 2$, sabemos que o miolo está contido a uma distância máxima de 2 da origem.
+\end{passo}
+\begin{passo}{2: Sanduíche e Isolamento}
+$-2 \le x - 3 \le 2$. Somando 3 em tudo: $1 \le x \le 5$.
+\end{passo}
+\[
+\boxed{S = [1, 5]}
+\]
+}
+
+\registrasolucao{1.2}{6n}{
+\begin{passo}{1: Módulo isolado}
+Para $|2x + 1| < 5$, desdobramos no sanduíche: $-5 < 2x + 1 < 5$.
+\end{passo}
+\begin{passo}{2: Resolução}
+Subtraindo 1: $-6 < 2x < 4$. Dividindo por 2: $-3 < x < 2$.
+\end{passo}
+\[
+\boxed{S = (-3, 2)}
+\]
+}
+
+\registrasolucao{1.2}{7b}{
+\begin{passo}{1: Conceito de Módulo "Maior que"}
+A inequação $|x + 2| \ge 4$ indica uma distância que escapa para as pontas.
+\end{passo}
+\begin{passo}{2: Separar com o conectivo "OU"}
+$x + 2 \le -4 \quad \text{OU} \quad x + 2 \ge 4$.
+Resultando em $x \le -6$ ou $x \ge 2$.
+\end{passo}
+\[
+\boxed{S = (-\infty, -6] \cup [2, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{7f}{
+\begin{passo}{1: Isolar a expressão modular primeiro}
+Para $|3x - 1| - 2 > 5$, passamos o 2: $|3x - 1| > 7$.
+\end{passo}
+\begin{passo}{2: Aplicar a regra do "Maior que"}
+$3x - 1 < -7 \Rightarrow x < -2$ \quad OU \quad $3x - 1 > 7 \Rightarrow x > 8/3$.
+\end{passo}
+\[
+\boxed{S = (-\infty, -2) \cup (8/3, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{8}{
+\begin{passo}{1: Inequações Simultâneas}
+Em $1 < 3x - 2 < 7$, queremos isolar o $x$ no meio operando nos três lados iguais.
+\end{passo}
+\begin{passo}{2: Resolução}
+Soma 2: $3 < 3x < 9$. Divide por 3: $1 < x < 3$.
+\end{passo}
+\[
+\boxed{S = (1, 3)}
+\]
+}
+
+\registrasolucao{1.2}{9}{
+\begin{passo}{1: Condição de Existência (Domínio)}
+\begin{atencao}
+Para raízes de índice par (como $\sqrt{\dots}$), o valor lá dentro \textbf{não pode ser negativo}. A condição será sempre $\ge 0$.
+\end{atencao}
+
+Para existir $\sqrt{x-5}$, o radicando deve ser: $x - 5 \ge 0$.
+\end{passo}
+\begin{passo}{2: Resolução}
+Isolando o x, obtemos $x \ge 5$.
+\end{passo}
+\[
+\boxed{D = [5, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{10e}{
+\begin{passo}{1: Cuidado com inversos}
+Na inequação $\frac{1}{x} > 2$, não multiplique cruzado. Faça $\frac{1}{x} - 2 > 0$.
+\end{passo}
+\begin{passo}{2: MMC e Sinais}
+Temos $\frac{1 - 2x}{x} > 0$. Raízes são $1/2$ (numerador) e $0$ (denominador). O estudo de sinais nos dá a região positiva.
+\end{passo}
+\[
+\boxed{S = (0, 1/2)}
+\]
+}
+
+\registrasolucao{1.2}{10h}{
+\begin{passo}{1: Produto de potências pares}
+Em $x^2(x-1) \ge 0$, o termo $x^2$ é sempre positivo ou nulo, não alterando o sinal da multiplicação.
+\end{passo}
+\begin{passo}{2: Neutralizar e analisar o resto}
+Logo, precisamos apenas que $x-1 \ge 0 \Rightarrow x \ge 1$. Porém, como $x=0$ zera a expressão inteira, ele também entra na solução.
+\end{passo}
+\[
+\boxed{S = \{0\} \cup [1, +\infty)}
+\]
+}
+
+% --- EXERCÍCIOS 11 AO 23 ---
+
+\registrasolucao{1.2}{11a}{
+\begin{passo}{1: Módulo menor puro}
+Equação modelo $|x| \le 3$. Aplicamos a regra da distância restrita: o valor está enclausurado.
+\end{passo}
+\begin{passo}{2: Desdobrar a condição}
+Desdobramos em um sanduíche: $-3 \le x \le 3$. Como o $x$ já está isolado, temos a resposta direta.
+\end{passo}
+\[
+\boxed{S = [-3, 3]}
+\]
+}
+
+\registrasolucao{1.2}{11f}{
+\begin{passo}{1: Módulo menor com função afim}
+Equação modelo $|2x - 1| < 5$. A distância da expressão ao zero é no máximo 5.
+\end{passo}
+\begin{passo}{2: Isolar a variável central}
+Desdobramos: $-5 < 2x - 1 < 5$. Somamos 1: $-4 < 2x < 6$. Dividimos por 2: $-2 < x < 3$.
+\end{passo}
+\[
+\boxed{S = (-2, 3)}
+\]
+}
+
+\registrasolucao{1.2}{11j}{
+\begin{passo}{1: Módulo menor com coeficiente negativo}
+Equação modelo $|-x + 2| \le 4$. O miolo fica entre $-4$ e $4$.
+\end{passo}
+\begin{passo}{2: Cuidado na divisão}
+$-4 \le -x + 2 \le 4$. Subtrai 2: $-6 \le -x \le 2$. Multiplicamos tudo por $-1$ (invertendo os sinais lógicos): $6 \ge x \ge -2$.
+\end{passo}
+\[
+\boxed{S = [-2, 6]}
+\]
+}
+
+\registrasolucao{1.2}{12}{
+\begin{passo}{1: Módulo maior (Divergência)}
+Equação modelo $|x| > 2$. A distância superou o limite, espalhando-se para os infinitos.
+\end{passo}
+\begin{passo}{2: Regra de desmembramento}
+Obrigatoriamente separamos em duas condições: $x < -2$ OU $x > 2$.
+\end{passo}
+\[
+\boxed{S = (-\infty, -2) \cup (2, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{13b}{
+\begin{passo}{1: Módulo maior com translação}
+Equação modelo $|x + 1| > 3$. 
+\end{passo}
+\begin{passo}{2: Separação em dois casos}
+Caso 1: $x + 1 < -3 \Rightarrow x < -4$. 
+Caso 2: $x + 1 > 3 \Rightarrow x > 2$.
+Unimos ambas as respostas.
+\end{passo}
+\[
+\boxed{S = (-\infty, -4) \cup (2, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{13f}{
+\begin{passo}{1: Módulo maior com "maior ou igual"}
+Equação modelo $|2x - 3| \ge 5$.
+\end{passo}
+\begin{passo}{2: Casos extremos}
+Ponta negativa: $2x - 3 \le -5 \Rightarrow 2x \le -2 \Rightarrow x \le -1$.
+Ponta positiva: $2x - 3 \ge 5 \Rightarrow 2x \ge 8 \Rightarrow x \ge 4$.
+\end{passo}
+\[
+\boxed{S = (-\infty, -1] \cup [4, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{13j}{
+\begin{passo}{1: Inversão de sinal dentro do módulo maior}
+Equação modelo $|5 - x| \ge 1$.
+\end{passo}
+\begin{passo}{2: Solucionando os dois braços}
+Braço 1: $5 - x \le -1 \Rightarrow -x \le -6 \Rightarrow x \ge 6$.
+Braço 2: $5 - x \ge 1 \Rightarrow -x \ge -4 \Rightarrow x \le 4$.
+\end{passo}
+\[
+\boxed{S = (-\infty, 4] \cup [6, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{15}{
+\begin{passo}{1: Módulo envolvendo função do segundo grau}
+Para resolver $|x^2 - 4| < 5$, criamos o sanduíche: $-5 < x^2 - 4 < 5$.
+\end{passo}
+\begin{passo}{2: Isolando o grau 2}
+Somando 4 a tudo: $-1 < x^2 < 9$. Como $x^2$ já é naturalmente maior que $-1$, focamos apenas na parte $x^2 < 9$. Logo, a raiz nos dá $-3 < x < 3$.
+\end{passo}
+\[
+\boxed{S = (-3, 3)}
+\]
+}
+
+\registrasolucao{1.2}{16}{
+\begin{passo}{1: Módulo quadrático divergente}
+Equação modelo $|x^2 - x| > 2$. Desmembramos em: $x^2 - x < -2$ (sem solução real) OU $x^2 - x > 2$.
+\end{passo}
+\begin{passo}{2: Estudo de sinal da parábola viável}
+Resolvemos $x^2 - x - 2 > 0$. As raízes são $2$ e $-1$. A parábola aponta as pontas para o infinito acima do eixo.
+\end{passo}
+\[
+\boxed{S = (-\infty, -1) \cup (2, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{17a}{
+\begin{passo}{1: Inequação Quadrática Clássica}
+Equação modelo $x^2 - 3x + 2 > 0$. Encontramos as raízes $1$ e $2$.
+\end{passo}
+\begin{passo}{2: Análise da curvatura}
+A parábola abre para cima. A região estritamente positiva fica fora do espaço entre as raízes.
+\end{passo}
+\[
+\boxed{S = (-\infty, 1) \cup (2, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{17c}{
+\begin{passo}{1: Quadrática de concavidade negativa}
+Equação modelo $-x^2 + x + 6 \le 0$. Raízes são $-2$ e $3$.
+\end{passo}
+\begin{passo}{2: Análise da curvatura invertida}
+Como $a < 0$, a parábola tem formato de sino (triste). Ela é negativa justamente nas extremidades (antes do $-2$ e depois do $3$).
+\end{passo}
+\[
+\boxed{S = (-\infty, -2] \cup [3, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{18}{
+\begin{passo}{1: Quociente de polinômios lineares}
+Equação modelo $\frac{x-1}{x+2} > 0$. Zeramos numerador ($x=1$) e denominador ($x=-2$).
+\end{passo}
+\begin{passo}{2: Regra de sinais}
+Duas retas crescentes. O cruzamento dos sinais nos mostra que a fração é positiva nas pontas exteriores às raízes.
+\end{passo}
+\[
+\boxed{S = (-\infty, -2) \cup (1, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{19a}{
+\begin{passo}{1: Preparação com MMC (Inequação Racional não nula)}
+Equação modelo $\frac{x}{x-1} \le 2$. Passamos o 2: $\frac{x - 2x + 2}{x-1} \le 0 \Rightarrow \frac{-x + 2}{x-1} \le 0$.
+\end{passo}
+\begin{passo}{2: Quadro e resposta}
+Raiz do numerador é 2 (incluso). Raiz do denominador é 1 (excluso). O sinal bate negativo nas extremidades do varal.
+\end{passo}
+\[
+\boxed{S = (-\infty, 1) \cup [2, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{19d}{
+\begin{passo}{1: Inequação mista (grau 2 sobre grau 1)}
+Equação modelo $\frac{x^2 - 1}{x + 3} \ge 0$. As raízes são $\pm 1$ (cima) e $-3$ (baixo).
+\end{passo}
+\begin{passo}{2: Estudo sobreposto de sinais}
+A parábola cruza o eixo trocando sinais, e a reta também. A combinação $\ge 0$ exige análise detalhada dos 4 intervalos formados.
+\end{passo}
+\[
+\boxed{S = (-3, -1] \cup [1, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{20c}{
+\begin{passo}{1: Soma de Módulos (Estudo por casos)}
+Equação modelo $|x-1| + |x-2| < 4$. As raízes internas são 1 e 2.
+\end{passo}
+\begin{passo}{2: Dividir a reta em três cenários}
+Para $x < 1$: resolvemos $-(x-1) - (x-2) < 4$.
+Para $1 \le x < 2$: resolvemos $(x-1) - (x-2) < 4$.
+Para $x \ge 2$: resolvemos $(x-1) + (x-2) < 4$.
+\end{passo}
+\begin{passo}{3: União}
+Validando cada solução com a premissa de seu cenário e unindo as partes consistentes.
+\end{passo}
+\[
+\boxed{S = (-1/2, 7/2)}
+\]
+}
+
+\registrasolucao{1.2}{22}{
+\begin{passo}{1: Condição de Existência (CE) da Raiz}
+Equação modelo $\sqrt{x-1} < 2$. O miolo não pode ser negativo: $x - 1 \ge 0 \Rightarrow x \ge 1$.
+\end{passo}
+\begin{passo}{2: Eliminação do radical e Interseção}
+Elevamos ao quadrado: $x - 1 < 4 \Rightarrow x < 5$. A solução final deve ser a interseção disso com a CE.
+\end{passo}
+\[
+\boxed{S = [1, 5)}
+\]
+}
+
+\registrasolucao{1.2}{23b}{
+\begin{passo}{1: Raiz com quadrática interna}
+Equação modelo $\sqrt{x^2 - 4} \le 3$. CE: $x^2 - 4 \ge 0 \Rightarrow x \le -2$ ou $x \ge 2$.
+\end{passo}
+\begin{passo}{2: Quadrado e restrição}
+$x^2 - 4 \le 9 \Rightarrow x^2 \le 13 \Rightarrow -\sqrt{13} \le x \le \sqrt{13}$. Fazendo a interseção com o domínio.
+\end{passo}
+\[
+\boxed{S = [-\sqrt{13}, -2] \cup [2, \sqrt{13}]}
+\]
+}
+
+\registrasolucao{1.2}{23d}{
+\begin{passo}{1: Inequação irracional do tipo "Maior Que"}
+Equação modelo $\sqrt{x-2} > 1$. CE garante $x \ge 2$.
+\end{passo}
+\begin{passo}{2: Resolução direta}
+Elevando ambos os lados estritamente positivos ao quadrado: $x - 2 > 1 \Rightarrow x > 3$. Como $3$ já é maior que a restrição da CE, essa é a solução.
+\end{passo}
+\[
+\boxed{S = (3, +\infty)}
+\]
+}
+
+\registrasolucao{1.2}{23f}{
+\begin{passo}{1: Raiz maior que incógnita}
+Equação modelo $\sqrt{2x - 1} \ge x$. CE: $x \ge 1/2$.
+\end{passo}
+\begin{passo}{2: Elevando ao quadrado}
+Como a CE já garante que a incógnita no lado direito será positiva (pois $x \ge 1/2$), podemos elevar tudo ao quadrado com segurança: $2x - 1 \ge x^2 \Rightarrow x^2 - 2x + 1 \le 0 \Rightarrow (x-1)^2 \le 0$. A única forma é sendo igual a zero, ou seja, $x=1$.
+\end{passo}
+\[
+\boxed{S = \{1\}}
+\]
+}

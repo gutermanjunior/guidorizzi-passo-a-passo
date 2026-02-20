@@ -1,0 +1,51 @@
+% ==========================================================
+% ARQUIVO PRINCIPAL DO LIVRO
+% ==========================================================
+
+\documentclass[10pt,openright]{book}
+
+% ----------------------------------------------------------
+% IMPORTAÇÃO DAS CONFIGURAÇÕES GERAIS
+% ----------------------------------------------------------
+\input{configuracoes}
+
+% ==========================================================
+% INÍCIO DO DOCUMENTO
+% ==========================================================
+
+\begin{document}
+
+% ----------------------------------------------------------
+% FRONTMATTER (Capa e Sumário)
+% ----------------------------------------------------------
+\frontmatter
+
+\makemytitle          
+\include{lista}
+\tableofcontents      
+
+
+% ----------------------------------------------------------
+% MAINMATTER (Capítulos do Livro - Numeração 1, 2, 3...)
+% ----------------------------------------------------------
+\mainmatter
+
+% ATENÇÃO: Apenas os capítulos normais entram aqui!
+\include{capitulos/capitulo1}  
+
+% ----------------------------------------------------------
+% APÊNDICES (Numeração A, B, C...)
+% ----------------------------------------------------------
+\appendix 
+% Tudo a partir daqui o LaTeX entende como Letra em vez de Número
+
+\include{capitulos/capituloA1}
+
+% ----------------------------------------------------------
+% BACKMATTER (Índices e Referências)
+% ----------------------------------------------------------
+\backmatter
+
+\printindex
+
+\end{document}

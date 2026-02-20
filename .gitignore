@@ -1,0 +1,68 @@
+# =========================
+# Arquivos temporários do LaTeX
+# =========================
+*.aux
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.acn
+*.glo
+*.gls
+*.glsdefs
+*.ist
+*.xdv
+
+# =========================
+# Arquivos de backup
+# =========================
+*~
+*.bak
+*.backup
+*.swp
+*.tmp
+
+# =========================
+# PDFs gerados (opcional)
+# =========================
+# Se você quiser versionar PDFs, comente esta linha
+*.pdf
+
+# =========================
+# Diretórios auxiliares
+# =========================
+_build/
+output/
+tmp/
+
+# =========================
+# Bibliografia / biber
+# =========================
+*.bcf
+*.run.xml
+
+# =========================
+# Configurações do editor
+# =========================
+.vscode/
+.idea/
+*.code-workspace
+
+# =========================
+# Arquivos do sistema
+# =========================
+.DS_Store
+Thumbs.db

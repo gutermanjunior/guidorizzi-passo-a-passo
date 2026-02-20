@@ -1,0 +1,114 @@
+\chapter{Propriedades dos Números Reais} % O LaTeX numera como "Apêndice A"
+
+% ====================================================
+% SEÇÃO A.1
+% ====================================================
+\section{Demonstrações e Conjuntos} % O LaTeX numera como "A.1"
+
+% Como você quer que o índice mostre A.1.1, precisamos usar o \subsection
+\subsection{Conjuntos e Inequações} % O LaTeX numera como "A.1.1"
+
+\begin{resumocapitulo}
+Revisão de matemática básica: operações com inequações de primeiro e segundo graus, análise de sinais de quocientes e equações modulares. Ferramentas essenciais para o cálculo de limites e derivadas.
+\end{resumocapitulo}
+
+\registrasolucao{A.1.1}{1d}{
+\begin{passo}{1: Identificar as raízes do numerador e denominador}
+Vamos resolver a inequação-quociente $\frac{x-2}{x+1} \ge 0$.
+
+\begin{atencao}
+Nunca multiplique cruzado em inequações! Não sabemos o sinal de $x+1$, e multiplicar por um valor negativo inverteria o sinal da desigualdade sem percebermos. 
+\end{atencao}
+
+O método correto é encontrar o que zera a parte de cima e a parte de baixo:
+\begin{itemize}
+    \item Numerador: $x - 2 = 0 \Rightarrow x = 2$ [cite: 47]
+    \item Denominador: $x + 1 = 0 \Rightarrow x = -1$ [cite: 47]
+\end{itemize}
+\textit{Atenção:} O denominador nunca pode ser zero, então $x$ tem que ser diferente de $-1$ (bolinha aberta).
+\end{passo}
+\begin{passo}{2: Analisar os sinais das retas separadamente}
+O termo $(x - 2)$ é uma reta crescente. É negativa antes do $2$ e positiva depois.
+O termo $(x + 1)$ também é uma reta crescente. É negativa antes do $-1$ e positiva depois.
+\end{passo}
+\begin{passo}{3: Regra de sinais da divisão (Quadro de Sinais)}
+Montamos as regiões divididas pelos pontos $-1$ e $2$:
+\begin{itemize}
+    \item Para $x < -1$: ($-$) dividido por ($-$) = \textbf{Positivo} ($+$)
+    \item Para $-1 < x < 2$: ($-$) dividido por ($+$) = \textbf{Negativo} ($-$)
+    \item Para $x > 2$: ($+$) dividido por ($+$) = \textbf{Positivo} ($+$)
+\end{itemize}
+Como a inequação pede os valores $\ge 0$ (positivos ou nulos), pegamos as bordas. O $-1$ fica aberto (restrição) e o $2$ fica fechado (pois a desigualdade inclui o igual).
+\end{passo}
+\[
+\boxed{S = \{ x \in \mathbb{R} \mid x < -1 \text{ ou } x \ge 2 \}}
+\]
+}
+
+\registrasolucao{A.1.1}{1e}{
+\begin{passo}{1: Interpretar o Módulo (distância menor que)}
+Temos a inequação modular $|2x - 1| < 5$. 
+Em matemática básica, o módulo representa uma distância. Dizer que $|A| < 5$ significa que o valor de $A$ está a uma distância menor que 5 unidades do zero. Ou seja, ele está preso "ensanduichado" entre $-5$ e $5$.
+\end{passo}
+\begin{passo}{2: Desdobrar em uma inequação simultânea}
+Aplicando essa regra, tiramos as barras de módulo desdobrando a expressão em duas desigualdades ao mesmo tempo:
+\[ -5 < 2x - 1 < 5 \]
+\end{passo}
+\begin{passo}{3: Isolar o $x$ no meio}
+Nosso objetivo agora é deixar o $x$ sozinho no centro. Fazemos a mesma operação nas três partes da inequação.
+Primeiro, somamos $1$ em tudo para cancelar o $-1$ do meio:
+\[ -5 + 1 < 2x < 5 + 1 \]
+\[ -4 < 2x < 6 \]
+Agora, dividimos tudo por $2$ (como é positivo, os sinais da desigualdade não mudam):
+\[ \frac{-4}{2} < x < \frac{6}{2} \]
+\[ -2 < x < 3 \]
+\end{passo}
+\[
+\boxed{S = \{ x \in \mathbb{R} \mid -2 < x < 3 \}}
+\]
+}
+
+\registrasolucao{A.1.1}{1g}{
+\begin{passo}{1: Interpretar o Módulo (distância maior que)}
+Agora temos a inequação $|x + 3| \ge 4$.
+Diferente do caso anterior, quando dizemos que a distância é \textbf{maior} que um número, estamos dizendo que o valor escapou para os extremos da reta. Ele é muito negativo (menor que $-4$) ou muito positivo (maior que $4$).
+\end{passo}
+\begin{passo}{2: Desdobrar em duas condições separadas por "ou"}
+Aplicando a propriedade da distância para os extremos, separamos a expressão original em duas inequações distintas:
+\[ x + 3 \le -4 \quad \text{OU} \quad x + 3 \ge 4 \]
+\end{passo}
+\begin{passo}{3: Resolver as duas pontas separadamente}
+\begin{itemize}
+    \item Lado esquerdo: $x + 3 \le -4 \Rightarrow x \le -4 - 3 \Rightarrow x \le -7$
+    \item Lado direito: $x + 3 \ge 4 \Rightarrow x \ge 4 - 3 \Rightarrow x \ge 1$
+\end{itemize}
+A solução final é a união dessas duas partes. Qualquer número menor que $-7$ ou maior que $1$ serve.
+\end{passo}
+\[
+\boxed{S = \{ x \in \mathbb{R} \mid x \le -7 \text{ ou } x \ge 1 \}}
+\]
+}
+
+\registrasolucao{A.1.1}{1h}{
+\begin{passo}{1: Transformar em equação para achar as raízes}
+Temos a inequação do 2º grau: $x^2 - 4x + 3 < 0$.
+Primeiro, vamos descobrir onde essa parábola cruza o chão (eixo $x$), igualando a zero: $x^2 - 4x + 3 = 0$.
+Podemos resolver por Bhaskara ou por Soma e Produto. Dois números que somados dão $4$ e multiplicados dão $3$ são:
+\[ x_1 = 1 \quad \text{e} \quad x_2 = 3 \]
+\end{passo}
+\begin{passo}{2: Esboçar a parábola para ver os sinais}
+Olhe para o número que acompanha o $x^2$. Ele é positivo ($+1$), o que significa que a parábola tem a concavidade voltada para cima (formato de "U" sorridente).
+\begin{itemize}
+    \item Antes do $1$: A parábola está no alto ($+$)
+    \item Entre o $1$ e o $3$: A parábola mergulha abaixo do chão ($-$)
+    \item Depois do $3$: A parábola volta a subir pro alto ($+$)
+\end{itemize}
+\end{passo}
+\begin{passo}{3: Selecionar a região que o problema pede}
+O problema original pergunta onde a expressão é menor que zero ($< 0$), ou seja, a região estritamente negativa.
+Pelo nosso esboço, isso acontece no mergulho da parábola, exatamente entre as raízes. Como é apenas menor (e não menor ou igual), os extremos não entram.
+\end{passo}
+\[
+\boxed{S = \{ x \in \mathbb{R} \mid 1 < x < 3 \}}
+\]
+}
