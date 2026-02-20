@@ -1,0 +1,246 @@
+\chapter{Funções}
+
+% ====================================================
+% SEÇÃO 2.1 - CONCEITO DE FUNÇÃO
+% ====================================================
+
+\registrasolucao{2.1}{1c}{
+% Rascunho de Intuição: Substituição direta. O objetivo é calcular o valor da função num ponto fracionário, exigindo manipulação de frações no numerador e denominador.
+\begin{passo}{1: Substituição da variável}
+Dada a função $f(x) = \frac{x^2 + 3}{x - 1}$, substituímos $x$ por $1/2$:
+\[ f\left(\frac{1}{2}\right) = \frac{\left(\frac{1}{2}\right)^2 + 3}{\frac{1}{2} - 1} \]
+\end{passo}
+\begin{passo}{2: Simplificar numerador e denominador separadamente}
+Numerador: $\left(\frac{1}{2}\right)^2 + 3 = \frac{1}{4} + 3 = \frac{1 + 12}{4} = \frac{13}{4}$.
+Denominador: $\frac{1}{2} - 1 = \frac{1 - 2}{2} = -\frac{1}{2}$.
+\end{passo}
+\begin{passo}{3: Divisão de frações}
+Multiplicamos a primeira pelo inverso da segunda:
+\[ f\left(\frac{1}{2}\right) = \frac{13}{4} \cdot \left(-\frac{2}{1}\right) = -\frac{26}{4} = -\frac{13}{2} \]
+\end{passo}
+\[
+\boxed{f\left(\frac{1}{2}\right) = -\frac{13}{2}}
+\]
+}
+
+\registrasolucao{2.1}{2c}{
+% Rascunho de Intuição: Simplificar o quociente incremental (f(x)-f(p))/(x-p). Para funções quadráticas, isso sempre resulta em uma soma linear após fatoração.
+\begin{passo}{1: Montar a expressão}
+Para $f(x) = x^2$ e $p$ qualquer:
+\[ \frac{f(x) - f(p)}{x - p} = \frac{x^2 - p^2}{x - p} \]
+\end{passo}
+\begin{passo}{2: Fatoração por diferença de quadrados}
+O numerador $x^2 - p^2$ pode ser escrito como $(x-p)(x+p)$.
+ \end{passo}
+\begin{passo}{3: Simplificação}
+Cancelando o termo $(x-p)$ (com $x \neq p$):
+\[ \frac{(x-p)(x+p)}{x-p} = x + p \]
+\end{passo}
+\[
+\boxed{x + p}
+\]
+}
+
+\registrasolucao{2.1}{2m}{
+\begin{passo}{1: Montar o quociente com $f(x) = 1/x$ e $p=1$}
+\[ \frac{f(x) - f(1)}{x - 1} = \frac{\frac{1}{x} - 1}{x - 1} \]
+\end{passo}
+\begin{passo}{2: Resolver a subtração no numerador}
+Fazendo o MMC no numerador: $\frac{1}{x} - 1 = \frac{1 - x}{x}$.
+\end{passo}
+\begin{passo}{3: Simplificar a fração composta}
+\[ \frac{\frac{1-x}{x}}{x-1} = \frac{1-x}{x(x-1)} \]
+Note que $1-x = -(x-1)$. Cancelando:
+\[ \frac{-(x-1)}{x(x-1)} = -\frac{1}{x} \]
+\end{passo}
+\[
+\boxed{-\frac{1}{x}}
+\]
+}
+
+\registrasolucao{2.1}{2n}{
+\begin{passo}{1: Montar o quociente com $p=2$}
+\[ \frac{\frac{1}{x} - \frac{1}{2}}{x - 2} \]
+\end{passo}
+\begin{passo}{2: MMC e fatoração}
+Numerador: $\frac{2 - x}{2x}$.
+Fração: $\frac{2-x}{2x(x-2)}$.
+Como $2-x = -(x-2)$, simplificamos:
+\[ \frac{-(x-2)}{2x(x-2)} = -\frac{1}{2x} \]
+\end{passo}
+\[
+\boxed{-\frac{1}{2x}}
+\]
+}
+
+\registrasolucao{2.1}{3c}{
+% Rascunho de Intuição: Quociente de Newton para função afim. O resultado deve ser o próprio coeficiente angular da reta.
+\begin{passo}{1: Calcular $f(x+h)$}
+Dada $f(x) = -2x + 4$, temos $f(x+h) = -2(x+h) + 4 = -2x - 2h + 4$.
+\end{passo}
+\begin{passo}{2: Calcular a diferença e dividir}
+\[ f(x+h) - f(x) = (-2x - 2h + 4) - (-2x + 4) = -2h \]
+\[ \frac{-2h}{h} = -2 \]
+\end{passo}
+\[
+\boxed{-2}
+\]
+}
+
+\registrasolucao{2.1}{3h}{
+\begin{passo}{1: Calcular $f(x+h)$ para $x^2-2x+3$}
+$f(x+h) = (x+h)^2 - 2(x+h) + 3 = x^2 + 2xh + h^2 - 2x - 2h + 3$.
+\end{passo}
+\begin{passo}{2: Subtrair $f(x)$}
+$f(x+h) - f(x) = (x^2 + 2xh + h^2 - 2x - 2h + 3) - (x^2 - 2x + 3) = 2xh + h^2 - 2h$.
+\end{passo}
+\begin{passo}{3: Dividir por $h$}
+\[ \frac{h(2x + h - 2)}{h} = 2x + h - 2 \]
+\end{passo}
+\[
+\boxed{2x + h - 2}
+\]
+}
+
+\registrasolucao{2.1}{3p}{
+\begin{passo}{1: Expansão cúbica}
+Para $f(x) = 2x^3 - x$, calculamos $f(x+h) = 2(x+h)^3 - (x+h)$.
+Expandindo: $2(x^3 + 3x^2h + 3xh^2 + h^3) - x - h = 2x^3 + 6x^2h + 6xh^2 + 2h^3 - x - h$.
+\end{passo}
+\begin{passo}{2: Diferença e simplificação}
+$f(x+h) - f(x) = 6x^2h + 6xh^2 + 2h^3 - h$.
+Dividindo tudo por $h$:
+\[ 6x^2 + 6xh + 2h^2 - 1 \]
+\end{passo}
+\[
+\boxed{6x^2 + 6xh + 2h^2 - 1}
+\]
+}
+
+\registrasolucao{2.1}{4d}{
+\begin{passo}{1: Identificar o domínio}
+$f(x) = 2x + 1$ é uma função polinomial do 1º grau. Não há divisões por zero ou raízes de números negativos.
+ Portanto, o domínio é $\mathbb{R}$.
+\end{passo}
+\begin{passo}{2: Esboçar o gráfico}
+É uma reta crescente (coeficiente $a=2 > 0$).
+ \begin{itemize}
+    \item Intercepto $y$: $(0, 1)$
+    \item Raiz ($y=0$): $2x+1=0 \Rightarrow x=-1/2$.
+\end{itemize}
+\end{passo}
+\[ \boxed{D = \mathbb{R} \text{ e gráfico é uma reta por } (0,1) \text{ e } (-1/2, 0)} \]
+}
+
+\registrasolucao{2.1}{4l}{
+\begin{passo}{1: Domínio}
+$f(x) = x^3$ é definida para todo $x \in \mathbb{R}$.
+\end{passo}
+\begin{passo}{2: Esboço}
+Função ímpar ($f(-x) = -f(x)$). Passa pela origem e cresce rapidamente para ambos os lados, com concavidade mudando em $(0,0)$.
+\end{passo}
+\[ \boxed{D = \mathbb{R}} \]
+}
+
+\registrasolucao{2.1}{6c}{
+% Rascunho de Intuição: Gráficos com módulo interno e externo. Começamos com |x|, transladamos e rebatemos a parte negativa.
+\begin{passo}{1: Construir a parte interna}
+Seja $g(x) = |x| - 1$. O gráfico é um "V" deslocado 1 unidade para baixo.
+\end{passo}
+\begin{passo}{2: Aplicar o módulo externo}
+A função $y = |g(x)| = \big| |x| - 1 \big|$ rebate a parte negativa de $g(x)$ (entre $x=-1$ e $x=1$) para cima.
+\end{passo}
+\begin{atencao}
+O bico da função que estava em $(0, -1)$ "sobe" para $(0, 1)$, criando um formato de "W".
+\end{atencao}
+\[ \boxed{\text{Gráfico em formato de W com vértices em } (-1,0), (0,1) \text{ e } (1,0)} \]
+}
+
+\registrasolucao{2.1}{7f}{
+\begin{passo}{1: Encontrar a raiz}
+$f(x) = -8x + 1$. Fazendo $f(x) = 0$: $8x = 1 \Rightarrow x = 1/8$.
+\end{passo}
+\begin{passo}{2: Analisar a declividade}
+Como o coeficiente de $x$ é $-8$ (negativo), a reta é decrescente.
+ \end{passo}
+\[ \boxed{f(x) > 0 \text{ para } x < 1/8; \quad f(x) < 0 \text{ para } x > 1/8} \]
+}
+
+\registrasolucao{2.1}{7h}{
+\begin{passo}{1: Raiz e comportamento}
+$f(x) = ax + b$ com $a < 0$ é uma reta decrescente.
+ A raiz é $x = -b/a$.
+\end{passo}
+\begin{passo}{2: Estudo de sinais}
+Sendo decrescente, os valores de $y$ são positivos antes da raiz e negativos após ela.
+ \end{passo}
+\[ \boxed{f(x) > 0 \text{ se } x < -b/a; \quad f(x) < 0 \text{ se } x > -b/a} \]
+}
+
+\registrasolucao{2.1}{8a}{
+\begin{passo}{1: Raízes da quadrática}
+$f(x) = x^2 - 3x + 2$. Usando soma e produto: raízes são $1$ e $2$.
+ \end{passo}
+\begin{passo}{2: Concavidade}
+$a = 1 > 0$, parábola "sorridente".
+ \end{passo}
+\[ \boxed{f(x) > 0 \text{ em } (-\infty, 1) \cup (2, +\infty); \quad f(x) < 0 \text{ em } (1, 2)} \]
+}
+
+\registrasolucao{2.1}{8m}{
+\begin{passo}{1: Calcular o discriminante}
+$f(x) = -x^2 - 4x - 5$. $\Delta = (-4)^2 - 4(-1)(-5) = 16 - 20 = -4$.
+ \end{passo}
+\begin{passo}{2: Conclusão pelo sinal de $a$}
+Como $\Delta < 0$ e $a = -1$, a parábola nunca cruza o eixo $x$ e está sempre abaixo dele.
+ \end{passo}
+\[ \boxed{f(x) < 0 \quad \forall x \in \mathbb{R}} \]
+}
+
+\registrasolucao{2.1}{9f}{
+\begin{passo}{1: Condições de existência}
+$f(x) = \sqrt{x-1} + \sqrt{x-2}$. Raízes quadradas exigem radicando $\ge 0$.
+ \begin{itemize}
+    \item $x-1 \ge 0 \Rightarrow x \ge 1$
+    \item $x-2 \ge 0 \Rightarrow x \ge 2$
+\end{itemize}
+\end{passo}
+\begin{passo}{2: Interseção}
+Para satisfazer ambas as condições simultaneamente, precisamos de $x \ge 2$.
+\end{passo}
+\[ \boxed{D = [2, +\infty)} \]
+}
+
+\registrasolucao{2.1}{9u}{
+\begin{passo}{1: Inequação modular}
+$f(x) = \sqrt{x^2 - 1}$. Exigimos $x^2 - 1 \ge 0 \Rightarrow x^2 \ge 1$.
+ \end{passo}
+\begin{passo}{2: Solução}
+A distância de $x$ à origem deve ser pelo menos 1: $x \ge 1$ ou $x \le -1$.
+ \end{passo}
+\[ \boxed{D = (-\infty, -1] \cup [1, +\infty)} \]
+}
+
+\registrasolucao{2.1}{10g}{
+\begin{passo}{1: Forma canônica}
+$y = (x + 1)^2 - 2$. O vértice é $V(-1, -2)$.
+\end{passo}
+\begin{passo}{2: Translações}
+É a parábola $y = x^2$ deslocada 1 unidade para a esquerda e 2 unidades para baixo.
+\end{passo}
+\[ \boxed{V = (-1, -2)} \]
+}
+
+\registrasolucao{2.1}{10r}{
+\begin{passo}{1: Definição por partes}
+$y = x^2 |x|$.
+Se $x \ge 0$, $y = x^2(x) = x^3$.
+Se $x < 0$, $y = x^2(-x) = -x^3$.
+\end{passo}
+\begin{passo}{2: Comportamento}
+A função é par ($f(-x) = f(x)$), logo o gráfico é simétrico em relação ao eixo $y$. É similar a uma parábola, mas cresce mais rápido (como uma cúbica "dobrada" para cima).
+\end{passo}
+\[ \boxed{y = x^2 |x| \ge 0 \quad \forall x} \]
+}
+
+Estes exercícios cobrem as bases de manipulação algébrica e visualização gráfica da Seção 2.1. Deseja que eu prossiga para os problemas de otimização (como o 32 ou 35) ou que detalhe mais os estudos de sinais do final desta lista?
